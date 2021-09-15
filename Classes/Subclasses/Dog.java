@@ -1,4 +1,5 @@
 // every class actually just instends the root class Object 
+//this is the parent class, Dog
 public class Dog{
 	//normally private but it needs to be accessed by the wolf class so instead attributes are protected
 	protected String name; 
