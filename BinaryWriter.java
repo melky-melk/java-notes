@@ -13,6 +13,9 @@ public class BinaryWriter {
             // takes string and writes it in
             output.writeUTF("INFO1113")
 
+			// writes the binary symbol for a unit seperator in java
+			output.writeUTF("\u001F");
+			
             // after writing in a file you cannot not close it
             output.close();
         }
