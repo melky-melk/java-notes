@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class ArrayLists {
 	public static main(String[] args){
 		//ArrayList = a resizable array. Elements can be added and removed after the comilation phase, only store reference data types
