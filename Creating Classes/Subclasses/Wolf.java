@@ -31,6 +31,6 @@ public class Wolf extends Dog{
 	}
 	*/
 
-	//because packsize is not initially part of the dog class a new method needs to be made
+	//because packsize is not initially part of the dog class a getter method needs to be made
 	public int getPackSize(){return this.packSize;}
 }

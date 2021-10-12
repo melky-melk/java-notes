@@ -10,7 +10,7 @@ public class Dog{
 		this.name = name;
 		this.age = age;
 		this.friendly = true;
-}
+	}
 
 	public String getName() {return this.name;}
 	public int getAge() {return this.age;}

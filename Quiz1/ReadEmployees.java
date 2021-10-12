@@ -18,12 +18,13 @@ public class ReadEmployees {
 				ArrayList<String> newEmployeeList = new ArrayList<String>();
 				ArrayList<String> existingEmployeeList;
 
+				// splits the txt file to an array of the strings
                 String[] lineArray = (sc.nextLine()).split(" ");
 
                 String companyName = lineArray[0];
                 String nameOfEmployee = lineArray[1];
 
-				// if the hashmap already contains the company's name then it adds 
+				// if the hashmap already contains the company's name then it adds the next employee
 				if (allCompaniesWithEmployees.containsKey(companyName)) {
 					//gets the employee list that already exists, adds the new employee to the existing list then sets the company with the new list
 					existingEmployeeList = allCompaniesWithEmployees.get(companyName);
@@ -38,13 +39,13 @@ public class ReadEmployees {
 
 			// initialises values
 			//sets the largest employee as the lowest possible
-			int mostEmployees = -1;
+			int mostEmployees = -1; //Double.POSITIVE_INFINITY Double.NEGATIVE_INFINITY 
 			String largestCompanyName = "";
 			ArrayList<String> employeeList;
 			
-			// gets all the company's names as a set then goes through all the company's names
+			// gets all the company's names as a set then goes through all the company's names NOTE: if you had a LinkedHashMap it will return the keys in order
 			for (String companyName : allCompaniesWithEmployees.keySet()) {
-				//gets the employee list from the key of the company
+				//gets the employee arraylist from the key of the company
 				employeeList = allCompaniesWithEmployees.get(companyName);
 
 				// checks if its larger

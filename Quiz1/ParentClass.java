@@ -27,9 +27,7 @@ class Employer extends ParentClass {
 	private String[] desiredSkills;
 
 	public Employer(String name, String[] desiredSkills){
-		// uses the super's constuctor to create the object with the name
 		super(name);
-		// then assigns the array to the subclass's attribute
 		this.desiredSkills = desiredSkills;
 	} 
 
@@ -48,7 +46,7 @@ class Employer extends ParentClass {
 					// then checks if the applicant's skill matches
 					if (applicantSkill.toUpperCase().equals(desiredSkill.toUpperCase())){
 
-						//then adds it to the applicants that have teh skill
+						//then adds it to the applicants that have the skill
 						namesOfApplicants.add(applicant.getName());
 					}
 				}
@@ -58,9 +56,9 @@ class Employer extends ParentClass {
 		//then makes a new set from the array list to remove all duplicates, linked hashset makes sure its still the same order
 		Set<String> set = new LinkedHashSet<>(namesOfApplicants);
 
-		//removes all items from the original set
+		//removes all items from the original list
 		namesOfApplicants.clear();
-		// then adds all the set back into the list all without duplicates
+		// then adds all the new (without duplicates) set back into the list
 		namesOfApplicants.addAll(set);
 		
 		return namesOfApplicants;
