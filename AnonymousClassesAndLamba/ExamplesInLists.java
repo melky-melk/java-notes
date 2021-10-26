@@ -8,6 +8,7 @@ public class ExamplesInLists {
 		list.add(4);
 		list.add(2);
 		System.out.println(list);
+		
 		// needs a comparator to sort??
 		// read the java doc on list.sort() it needs to take a lamba comparator
 		list.sort((a, b) -> a - b);

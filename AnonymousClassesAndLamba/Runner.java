@@ -62,7 +62,7 @@ public class Runner{
 		// spy is a lamba expression that takes in a value and returns the hashCode equivalent when encode is called.
 		// this is because encode is the only method that is waiting to be implemented, meaning the only method that is not default
 		// anything that is entered into spy.encode() will return a hashcode  
-		// instead of using the typical encode method it overwrites it and uses hashCode()
+		// instead of using the typical encode method it overwrites it and uses the val's hashCode()
 		Spy spy = (val) -> (val.hashCode() + ""); //sneaky way to convert values to a string is to add ""
 		System.out.println(spy.encode("abc"));
 
