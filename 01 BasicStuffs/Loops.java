@@ -38,7 +38,7 @@ public class Loops{
         //for item in list: 
         
         //to create an empty array
-        int[] arrayName = new [specify length of array];
+        int[] arrayName = new int[specify length of array];
 
         //can change variable name for the elements like item or some shit
         //have to declare the variable type for the elements inside the loop

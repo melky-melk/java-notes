@@ -75,6 +75,14 @@ public class Comparator {
     
         sortByDuration(songs);
         System.out.println(songs);
+
+		// 
+		HashMap<String, Integer> map = new HashMap<>();
+
+		map.put("name", 1);
+		// int num = map.get("name");
+		// value.contains
+		map.values().removeIf((value) -> value.equals(1));
 	}
 }
 

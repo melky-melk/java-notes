@@ -3,13 +3,19 @@ import java.util.*;
 // STREAM NEEDS ITS OWN IMPORT
 import java.util.stream.*;
 
-public class Runner{
+/*
+ANONYMOUS CLASSES CAN USE MORE THAN JUST THE FUNCTIONAL INTERFACE BECAUSE IT CAN DEFINE THE METHOD THEN OVERRIDE IT
+
+WHEREAS LAMBDAS CAN ONLY USE THE FUNCTIONAL INTERFACE BECAUSE IT ONL OVERRIDES THE ONE METHOD
+*/
+public class Main{
 	public static void main(String[] args){
 		Bond bond = new Bond();
 		System.out.println(bond.encode("12345abcde"));
 		
 		// takes the interface and implements the method inside another method
 		// ---------------------------------implementing the method on the spot----------------------
+		// example of anonymous class implementation
 		Spy x = new Spy() {
 			public String encode(String val){
 				//pig -> igpay
@@ -26,10 +32,6 @@ public class Runner{
 
 				return result;
 			}
-
-			// public String decode(String[] val){
-			// 	return val;
-			// }
 		};
 
 		// now the x can use the method just made

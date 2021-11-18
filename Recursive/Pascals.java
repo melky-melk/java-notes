@@ -11,32 +11,48 @@ public class Pascals {
 		1 4 6 4 1
 	*/
 
-	// gives the nth row of the tree
-	public static int[] pascals(int n){
+	// gives the nth row, if it was pascal(5) it would give 1 4 6 4 1 
+    public static List<Integer> pascal(int n) {
+        List<Integer> values = new ArrayList<>();
+
+        //base cases
+        if (n == 0) {
+            values.add(1);
+            return values;
+        }
+        if (n == 1) {
+            values.add(1);
+            values.add(1);
+            return values;
+        }
+
+        //recursive case
+
+		// add the 1 to the beginning first
+        values.add(1);
+
+		// get the row above it
+        List<Integer> lineAbove = pascal(n-1);
+
+		// goes through the line on top and adds the 2 values above 
+        for(int i = 1; i < lineAbove.size(); i++) {
+
+			// for line 5 the line above is line 4, so 1 3 3 1
+			// 1 has already been added
+			// 1 + 3 = 4, so the one underneath in line 5 is 4
+			// the return list now having 1, 4
+            int num = lineAbove.get(i-1) + lineAbove.get(i);
+            values.add(num);
+        }
 		
-		if (n == 0){
-			return new int[] {1};
-		} else {
-			int[] aboveRow = pascals(n - 1);
-			
-			// the length of the rows correspond to n + 1
-			int[] returnArray = new int[n + 1]
+		//then adds to the end of the list 
+        values.add(1);
 
-			// if you look at the pyramid above the first and last values are always 1
-			returnArray[0] = 1;
-			returnArray[n] = 1;
+        return values;
+    }
 
-			//second element going to the second last element (to avoid the 1's )
-			for (int i = 1; i < n; i ++){
-				// in the fibonacci sequence you add the two numbers ontop of the number together for the 6 in the bottom row, 3 + 3 = 6
-				returnArray[i] = above[i - 1] + above[i];
-			}
-
-			return returnArray;
-		}
-	}
-
-	public static void main(String[] args){
-		System.out.println(Arrays.toString(fib(0))); //1
-	}
+    public static void main(String[] args) {
+        System.out.println(pascal(4).toString());
+        System.out.println(pascal(8).toString());
+    }
 }

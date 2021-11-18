@@ -29,7 +29,7 @@ public class ExamplesInLists {
 
 		// in this case the predicate is true if the element inside is even so it will remove all odd
 		list.stream()
-			.filter((t) -> t % 2 == 0)
+			.filter((t) -> t % 2 == 0) //the t in this case is every element
 			.forEach((t) -> System.out.println(t)); //goes through every element and prints it
 
 		// to check if a string worked you can use the forEach method inside stream
