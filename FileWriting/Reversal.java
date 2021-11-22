@@ -22,6 +22,7 @@ public class Reversal {
             //System.out is actually an instance of the PrintWriter class
             //but in this case the output is not the terminal and is instead the output file
             PrintWriter pw = new PrintWriter(output);
+			// can calso do this f2.println("thaorseithasort")
 
             //if it gets to the end of the file it stops reading
             while (sc.hasNextLine()){
