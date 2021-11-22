@@ -7,4 +7,4 @@ note: this shit isnt in the order it should be read, idk how to make it not alph
 
 another note: the files in folders should read together, concepts like abstraction and subclasses should be read with the files next to each other because it makes more sense in context with each other and whatnot
 
-another nother note: this shit just assumes python knowledge at times.
+another nother note: this just assumes python knowledge at times.
