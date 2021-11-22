@@ -12,12 +12,14 @@ public class SimpleCalculation {
 		Calculate multiplication = (x, y) -> (x * y);
 		Calculate division = (x, y) -> (x / y);
 		Calculate powerTo = Math::pow;
+		Calculate powerToPart2 = (x, y) -> Math.pow(x, y);
+
 
 		// now when it uses the interface's method it uses the overridden method specified when the object was created above
 		System.out.println(addition.calculate(6, 3));        //9
 		System.out.println(subtraction.calculate(6, 3));	 //5
 		System.out.println(multiplication.calculate(6, 3));  //18
 		System.out.println(division.calculate(6, 3));		 //2
-		System.out.println(powerTo.calculate(6, 3));		 //2
+		System.out.println(powerTo.calculate(6, 3));		
 	}
 }

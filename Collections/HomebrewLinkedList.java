@@ -1,4 +1,10 @@
-public class HomebrewLinkedList<T> {
+// you need to make your list iterable to iterate it
+// and you need to make an iterator through the iterable 
+
+// needs to implement iterable so it inherits some of the default methods (i.e. the for each stuff)
+// it has 1 method that needs to be overriden, that method being the one that returns the iterator. 
+// (because in this case you have to make your own iterator)
+public class HomebrewLinkedList<T> implements Iterable<T>{
 	private Node<T> head;
 	private long size;
 
@@ -7,6 +13,9 @@ public class HomebrewLinkedList<T> {
 		this.size = 0;
 		this.head = null;
 	}
+
+	// returns the HomebrewIterator
+	public Iterator<T> iterator() {return new ListIterator<T>(this);}
 
 	public long size(){return this.size;}
 
@@ -127,20 +136,26 @@ class Node<T> {
 	}
 }
 
-// // starts at the head then works down current node pointer that points to the head
-
-// // keeps going
-// while (true){
-// 	// gets the next value for the nodes and sets it as next
-// 	Node<T> next = temp.getNext()
-
-// 	// if the next one is null then it is at the end of the list
-// 	if (next == null){
-// 		// then sets the previous one to the next thing 
-// 		temp.setNext(newNode);
-// 		// creates the new node for the end of the list
-// 		newNode.setNext(null);
-
-// 		break;
-// 	}
-// } NULL CHECKS IF ANIMAL = nuLL IF WHICH CHECK 
+// implements the iterator interface so it can inherit some of the methods
+class HomebrewIterator<T> implements Iterator<T>{
+	 Node<T> current;
+      
+    // initialize pointer to head of the list for iteration
+    public ListIterator(List<T> list)
+    {
+        current = list.getHead();
+    }
+      
+    // returns false if next element does not exist
+    public boolean hasNext()
+    {
+        return current != null;
+    }
+      
+    // return current data and update pointer
+    public T next(){
+        T data = current.getData();
+        current = current.getNext();
+        return data;
+    }
+}
