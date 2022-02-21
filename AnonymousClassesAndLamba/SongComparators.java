@@ -50,6 +50,7 @@ class Song {
     public static void sortByAuthor(List<Song> songs) {
         Collections.sort(songs, (Song s1, Song s2) -> s1.getAuthor().compareTo(s2.getAuthor()));
 
+		// comaparator methods overwrite the functional interface method compare, which returns an integer
 		Comparator comparator = (Song s1, Song s2) -> s1.getAuthor().compareTo(s2.getAuthor());
 		Collections.sort(songs, comparator);
     }
