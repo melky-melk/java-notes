@@ -6,7 +6,7 @@ public class Dog{
 	protected int age;
 	protected boolean friendly;
 	
-	public Dog(String[], int age){
+	public Dog(String name, int age){
 		this.name = name;
 		this.age = age;
 		this.friendly = true;
@@ -16,7 +16,6 @@ public class Dog{
 	public int getAge() {return this.age;}
 	public boolean getFriendly() {return this.friendly;}
 
-	// overloading methods
 	public void bark(){
 		System.out.println("woof");
 	}

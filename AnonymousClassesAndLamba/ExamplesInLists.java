@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class ExamplesInLists {
 	public static void main(String[] args){
 		//----------------------SORTING AND STREAMS-------------------------

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Fibonacci {
+public class Fibonacci2 {
 
 	// now has a hashmap inside to store the previous answers
 	// the key being the n in F(n) and the value being the integer F(n) = x, the x
@@ -12,20 +12,20 @@ public class Fibonacci {
             return fibMemory.get(n);
         }
 		
-        if (n < 0) {return -1};
+        if (n < 0) {return -1;}
 
         //base cases
         if (n == 0) {
-            fibMemory.put(n, 0)
+            fibMemory.put(n, 0);
             return 0;
         }
         if (n == 1) {
-            fibMemory.put(n, 1)
+            fibMemory.put(n, 1);
             return 1;
         }
 
         //recursive case
-        int result = f(n-1) + f(n-2)
+        int result = f(n-1) + f(n-2);
         fibMemory.put(n, result);
         return (result);
     }

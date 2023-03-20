@@ -25,7 +25,7 @@ public class FileWriting {
 
             //if it gets to the end of the file it stops reading
             while (sc.hasNextLine()){
-                String line = sc.NextLine;
+                String line = sc.nextLine();
 
                 StringBuilder build = new StringBuilder(line);
                 StringBuilder reverse = build.reverse(); 
@@ -39,7 +39,7 @@ public class FileWriting {
             pw.flush();
             pw.close();
         }
-        catch{ FileNotFoundException e)
+        catch (FileNotFoundException e) { 
             //prints FileNotFoundException message withot the try catch it wont compile
             e.printStackTrace();
         }

@@ -11,7 +11,7 @@ public class Fish extends Animal {
 
     // calling the parent constructor to do the work for it (makes it better for debugging and saves line (later if there is more parameters it would save lines))
     public Fish (String name){
-        super(name)
+        super(name);
     }
 
     // implementation of the methods that were forced by the abstract

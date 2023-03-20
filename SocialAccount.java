@@ -11,7 +11,7 @@ public class SocialAccount {
 	private SocialAccount[] importedFriends;
 
 
-	public SocialAccount(String firstName, String lastName, int age, String location, String phoneNumber, String email, String profileURl, String bio, SocialAccount[] importedFriends){
+	public SocialAccount(String firstName, String lastName, int age, String location, String phoneNumber, String email, String profileURl, String bio){
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.location = location;
@@ -20,7 +20,6 @@ public class SocialAccount {
 		this.profileURl = profileURl;
 		this.bio = bio;
 		this.age = age;
-		this.importedFriends = importedFriends;
 	}
 
 	// public SocialAccount(String firstName, String lastName){
@@ -49,7 +48,7 @@ public class SocialAccount {
 	*/
 
 	public static void main(String[] args){
-		SocialAccount alex = new SocialAccount("Alex", "Smith", 21, null, null, null, null, "www.profile.com", "");
+		SocialAccount alex = new SocialAccount("Alex", "Smith", 21, null, null, null, null, "www.profile.com");
 		SocialAccount bill = new SocialAccount("Bill", "Damon", 19, null, "314159265", null, null, "Small bio");
 		SocialAccount carl = new SocialAccount("Carl", "Grimes", 16, "Georgia", null, null, null, null);
 

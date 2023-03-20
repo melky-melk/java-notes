@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class Fibonacci{
 	// using caches to store numbers specifically so that you can use precalled methods instead of calling the mthods over and over
 	// if you call fib(6) you need to calculate numbers multiple times, fib(3) will need to be calculated 3 times
@@ -11,15 +13,15 @@ public class Fibonacci{
 		fibHelper(n, map);
 	}
 
-	int fibHelper(int n, HashMap<Integer, Integer> map){
+	public int fibHelper(int n, HashMap<Integer, Integer> map){
 		// when calculating the sequence, if the map has already seen that number been calculated before then it gets the answer to that number
-		if map(containsKey(n)){
+		if (map.containsKey(n)){
 			return map.get(n);
 		}
 		// otherwise it calculates the fibonacci sequence like usual then saves it
 		else {
 			int answer = fibHelper(n - 1, map) + fibHelper(n - 2, map);
-			map.put(n, answer)
+			map.put(n, answer);
 			return answer;
 		}
 	}

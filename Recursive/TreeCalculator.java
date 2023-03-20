@@ -37,20 +37,19 @@ public class TreeCalculator{
 			case '+':
 				return (calculate(node.left) + calculate(node.right));
 				// return (node.left) + node.right);
-				break;
 			case '-':
 				return (calculate(node.left) - calculate(node.right));
-				break;
 			case '*':
 				return (calculate(node.left) * calculate(node.right));
-				break;
 			case '/':
 				return (calculate(node.left) / calculate(node.right));
-				break;
+			default:
+				return -1;
 		}
 	}
 
-	public static boolean solution(Tree<Integer> t, int s) {
+	// the initial start one should be the root
+	public static boolean solution(Node t, int s) {
         //If just one of left or right was null, then it was not a child node and false can be returned safely
         // if its null that means that it couldnt keep going all the way to the left or all the way to the right and thus is not a leaf its just a part of the branch that isnt there
         if(t == null) return false;
@@ -59,14 +58,14 @@ public class TreeCalculator{
         // if this is at the bottom, meaning it doesnt have any left or right input then you can do the evaluation and return the boolean
         // where the S value has been continously modified down, instead of incrementing the t
         if(t.left == null && t.right == null) {
-            return (s == t.value);
+            return (s == t.number);
         }
 
         // the or statement forces it to go down to the left first and calculate it all the way down until it hits a base case
         // once it hits the bottom it will return evaluate to true or false, if true that means that at least one of the branches are true as it keeps going
         // IF THIS IS FALSE, LIKE THE T.LEFT IS FALSE THEN IT MOVES TO THE T.RIGHT TO CHECK THAT ONE
         // but it also does both when the first is put on 
-        return solution(t.left, s-t.value) || solution(t.right, s-t.value);
+        return solution(t.left, s-t.number) || solution(t.right, s-t.number);
     }
 
 	public static void main(String[] args){

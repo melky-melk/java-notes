@@ -20,7 +20,7 @@ public class Factorial {
 		// once it hits 0, it will do all the stack cases again but backwards starting from 1 then going up?
 	}
 
-	public static main(String[] args){
+	public static void main(String[] args){
 		System.out.println(fact(5));
 	}
 }

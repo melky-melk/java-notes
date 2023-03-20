@@ -11,7 +11,7 @@ public class BinaryWriter {
             //uses the object to write the integer inside
             output.writeInt(50);
             // takes string and writes it in
-            output.writeUTF("INFO1113")
+            output.writeUTF("INFO1113");
 
 			// writes the binary symbol for a unit seperator in java
 			output.writeUTF("\u001F");

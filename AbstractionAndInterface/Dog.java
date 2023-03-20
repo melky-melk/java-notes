@@ -2,7 +2,7 @@
 public class Dog extends Animal implements Movable{
 
     public Dog (String name){
-        super(name)
+        super(name);
     }
 
     public void move(){

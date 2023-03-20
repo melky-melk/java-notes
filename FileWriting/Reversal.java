@@ -26,7 +26,7 @@ public class Reversal {
 
             //if it gets to the end of the file it stops reading
             while (sc.hasNextLine()){
-                String line = sc.nextLine;
+                String line = sc.nextLine();
 
                 StringBuilder build = new StringBuilder(line);
                 StringBuilder reverse = build.reverse(); 

@@ -1,5 +1,6 @@
 import java.util.LinkedList;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Lists{
 	public static void main(String[] args){
@@ -46,7 +47,7 @@ public class Lists{
 			//if the string in the next part of the ito
 			if ((String) it.next() == "melk");
 			
-			System.out.println("we found melk")
+			System.out.println("we found melk");
 		}
 
 

@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 interface Say {
 	public void greeting(String str);
 }

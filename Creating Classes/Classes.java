@@ -28,7 +28,7 @@ class Book {
 }
 
 //this is the one thats run
-public class Main {
+public class Classes {
     public static void main(String[] args){
         //creating an object of the class book. the same way to how you would make scanner objects
         //like in python, putting the values needed for the attributes
