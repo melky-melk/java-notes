@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /*
 Using the following class Song,Write an anonymous class/lambda that will allow you to sort the
 elements in a list of Songs with a certain property.
@@ -24,13 +28,12 @@ class Song {
 
  	public static void sortByTitle(List<Song> songs) {
         Collections.sort(songs, (Song s1, Song s2) -> s1.getTitle().compareTo(s2.getTitle()));
-		
     }
 
 	public static void sortByTitleNotLambda(List<Song> songs){
 
 		// creates a new comparator OBJECT from the Comparator class 
-		Collections.sort(songs, new Comparator<Song>() {
+		Collections.sort(songs, new Comparator() {
             public int compare(Song s1, Song s2) {
                 return s1.getTitle().compareTo(s2.getTitle());
             }
@@ -60,7 +63,7 @@ class Song {
     }
 }
 
-public class Comparator {
+class Comparator{
 	public static void main(String[] args){
 		List<Song> songs = new ArrayList<Song>();
     
